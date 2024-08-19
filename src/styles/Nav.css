@@ -15,54 +15,12 @@
   left: 0;
   top: 0;
   position: fixed;
-  height: 100vh; /* Cambiado de 100% a 100vh para cubrir toda la ventana */
+  height: 100vh; /* Cubrir toda la ventana */
   z-index: 1000;
 }
 
-.navSidebar {
-  background-color: #BBA0CA;
-  padding: 56px 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 285px;
-  box-sizing: border-box;
-  color: #33102E;
-  transition: all 0.3s ease;
-  transform: translateX(0); /* Asegura que la barra lateral esté visible */
-  left: 0;
-  top: 0;
-  position: fixed;
-  height: 100vh;
-  z-index: 1000; /* Asegura que la barra lateral esté siempre encima */
-}
-
-.navSidebar.closed {
+.navSidebar.closed, .chat-sidebar.closed {
   transform: translateX(-100%); /* Mueve la barra lateral fuera de la vista */
-  transition: transform 0.3s ease; /* Transición suave */
-}
-
-.chat-sidebar{
-  background-color: #BBA0CA;
-  padding: 56px 48px;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  justify-content: space-between;
-  max-width: 285px;
-  box-sizing: border-box;
-  color: #33102E;
-  transition: all 0.3s ease;
-  transform: translateX(0); /* Asegura que la barra lateral esté visible */
-  left: 0;
-  position: fixed;
-  height: 100vh;
-  z-index: 1000; /* Asegura que la barra lateral esté siempre encima */
-}
-
-.chat-sidebar.closed {
-  transform: translateX(-100%); /* Mueve la barra lateral fuera de la vista */
-  transition: transform 0.3s ease; /* Transición suave */
 }
 
 .sidebar__button {
@@ -80,17 +38,17 @@
 }
 
 .header__button {
-  position: fixed; /* Fijado para que esté fuera de la barra lateral */
+  position: fixed;
   top: 0px;
-  left: 285px; /* Posicionado en la esquina superior derecha */
+  left: 285px;
   border: none;
   background-color: #BBA0CA;
   outline: none;
   padding: 16px;
-  font-size: 26px; /* Tamaño del icono */
+  font-size: 26px;
   cursor: pointer;
-  display: none; /* Oculto por defecto */
-  z-index: 1001; /* Asegura que el botón esté siempre encima de la barra lateral */
+  display: none;
+  z-index: 1001;
 }
 
 .sidebar__copyright,
@@ -221,7 +179,6 @@
   .navSidebar, .chat-sidebar {
     padding: 48px 40px;
     max-width: 260px;
-    height: 100%;
   }
 
   .sidebar__button, .header__button {
