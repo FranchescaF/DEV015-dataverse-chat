@@ -62,7 +62,9 @@ h2 {
     height: 400px;
     object-fit: cover;
     transition: transform 0.3s ease; /* Transición para el efecto de zoom */
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .card__details {
@@ -102,20 +104,6 @@ h2 {
 }
 
   /*Modo responsive*/
-/* Pantallas pequeñas (móviles) */
-@media (max-width: 480px) {
-  .card-container ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-left: 0; /* Asegura que las cartas estén centradas */
-  }
-
-  .cardli {
-    width: auto;
-    height: auto;
-    transition: all 0.5s ease; /* Aplicar transición a todas las propiedades */
-  }
-}
 
 /* Pantallas pequeñas (móviles, max-width: 320px a 480px) */
 @media (max-width: 480px) {
@@ -210,7 +198,7 @@ h2 {
   }
 
   .card__description {
-    font-size: 1.2rem; /* Ajusta el tamaño de la descripción */
+    font-size: 1rem; /* Ajusta el tamaño de la descripción */
   }
 
   .card_image {
