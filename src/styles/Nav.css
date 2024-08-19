@@ -1,7 +1,7 @@
 /* Material Icons */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-.navSidebar, .chat-sidebar {
+.navSidebar {
   background-color: #BBA0CA;
   padding: 56px 48px;
   display: flex;
@@ -11,16 +11,39 @@
   box-sizing: border-box;
   color: #33102E;
   transition: all 0.3s ease;
-  transform: translateX(0);
+  transform: translateX(0); /* Asegura que la barra lateral esté visible */
   left: 0;
   top: 0;
   position: fixed;
-  height: 100vh; /* Cubrir toda la ventana */
-  z-index: 1000;
+  height: 100%;
+  z-index: 1000; /* Asegura que la barra lateral esté siempre encima */
 }
 
-.navSidebar.closed, .chat-sidebar.closed {
+.navSidebar.closed {
   transform: translateX(-100%); /* Mueve la barra lateral fuera de la vista */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.chat-sidebar{
+  background-color: #BBA0CA;
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 285px;
+  box-sizing: border-box;
+  color: #33102E;
+  transition: all 0.3s ease;
+  transform: translateX(0); /* Asegura que la barra lateral esté visible */
+  left: 0;
+  position: fixed;
+  height: 100%;
+  z-index: 1000; /* Asegura que la barra lateral esté siempre encima */
+}
+
+.chat-sidebar.closed {
+  transform: translateX(-100%); /* Mueve la barra lateral fuera de la vista */
+  transition: transform 0.3s ease; /* Transición suave */
 }
 
 .sidebar__button {
@@ -107,101 +130,4 @@
   justify-content: center;
   align-items: center;
   color: #33102E; /* Ajusta el color de acuerdo a tu paleta */
-}
-
-/* Pantallas pequeñas (320px a 480px) */
-@media (max-width: 480px) {
-  .navSidebar, .chat-sidebar {
-    padding: 28px 24px;
-    max-width: 200px;
-  }
-
-  .sidebar__button, .header__button {
-    display: block;
-  }
-
-  .header__button {
-    left: 200px; /* Ajustar la posición del botón de apertura */
-  }
-
-  .sidebar__title {
-    font-size: 24px;
-    line-height: 30px;
-    margin-top: 20px;
-  }
-
-  .sidebar__nav-links {
-    gap: 15px;
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  .nav__social {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-/* Pantallas medianas (481px a 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .navSidebar, .chat-sidebar {
-    padding: 36px 32px;
-    max-width: 240px;
-  }
-
-  .sidebar__button, .header__button {
-    display: block;
-  }
-
-  .header__button {
-    left: 240px; /* Ajustar la posición del botón de apertura */
-  }
-
-  .sidebar__title {
-    font-size: 26px;
-    line-height: 34px;
-  }
-
-  .sidebar__nav-links {
-    gap: 18px;
-    font-size: 19px;
-    line-height: 29px;
-  }
-
-  .nav__social {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-/* Pantallas grandes (769px a 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .navSidebar, .chat-sidebar {
-    padding: 48px 40px;
-    max-width: 260px;
-  }
-
-  .sidebar__button, .header__button {
-    display: block;
-  }
-
-  .header__button {
-    left: 260px; /* Ajustar la posición del botón de apertura */
-  }
-
-  .sidebar__title {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .sidebar__nav-links {
-    gap: 20px;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .nav__social {
-    width: 40px;
-    height: 40px;
-  }
 }

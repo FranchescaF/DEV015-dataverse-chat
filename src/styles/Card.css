@@ -207,19 +207,4 @@ h2 {
     padding: 20px; /* Ajusta el padding para pantallas grandes */
   }
 
-  .header {
-    margin-left: 285px; /* Asegura que las cartas no sean tapadas por la barra lateral */
-  }
-
-  .card-container ul {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    margin-left: 285px; /* Asegura que las cartas no sean tapadas por la barra lateral */
-  }
-
-  .cardli {
-    width: 270px;
-    height: 725px;
-    transition: all 0.5s ease; /* Aplicar transición a todas las propiedades */
-  }
 }
