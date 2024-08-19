@@ -11,8 +11,8 @@
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
-    margin-left: 50px; /* Ajusta el margen izquierdo para que no se superponga con la imagen y descripción */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Añadir sombra para un efecto más profesional */
+    margin-left: 50px; /* Ajusta el margen izquierdo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .chat-header {
@@ -24,16 +24,16 @@
     color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera en el header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .profile-pic {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    object-fit: cover; /* Asegura que la imagen cubra completamente el área del círculo */
+    border-radius: 50%;
+    object-fit: cover;
     margin-right: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera alrededor de la imagen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .chat-header-info {
@@ -56,7 +56,7 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Mayor espacio entre mensajes */
+    gap: 15px;
 }
 
 .message-container {
@@ -70,26 +70,23 @@
     height: 30px;
     border-radius: 50%;
     margin-right: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera alrededor de la imagen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .message-content {
     background-color: #D1C8E1;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra para los mensajes */
-    width: 90%; /* Ajusta el ancho del mensaje */
-    max-width: 90%; /* Asegura que no exceda el 90% del ancho del contenedor padre */
-    text-align: left; /* Alinea el texto a la izquierda */
-    padding: 10px; /* Ajusta el relleno interno para dar más espacio al texto */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    text-align: left;
 }
 
 .user-message .message-content {
     background-color: #87255B;
     color: white;
     align-self: flex-end;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra más intensa para los mensajes del usuario */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .chat-input {
@@ -109,7 +106,7 @@
     border-radius: 20px;
     margin-right: 10px;
     outline: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera en el input */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .send-button {
@@ -119,85 +116,173 @@
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera en el botón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .send-button .material-icons {
     font-size: 18px;
 }
-/* Contenedor de la imagen y el indicador de estado */
+
 .image-container {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Imagen de perfil */
-  .profile-pic {
+}
+
+.profile-pic {
     border-radius: 50%;
-    width: 50px; /* Ajusta este valor según el tamaño de la imagen */
-    height: 50px; /* Ajusta este valor según el tamaño de la imagen */
-  }
-  
-  /* Indicador de estado (punto verde) */
-  .status-indicator {
+    width: 50px;
+    height: 50px;
+}
+
+.status-indicator {
     position: absolute;
-    top: 100;
-    bottom: 0; /* Posiciona el punto verde en la parte inferior */
-    right: 100; /* Posiciona el punto verde en la parte derecha */
-    width: 15px; /* Tamaño del punto verde */
-    height: 15px; /* Tamaño del punto verde */
-    background-color: #4CAF50; /* Color verde */
-    border: 2px solid white; /* Borde blanco para separarlo de la imagen */
-    border-radius: 50%; /* Para hacer el punto verde redondo */
-  }
-  /* Estilo base para todos los mensajes */
-  .message {
+    bottom: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #4CAF50;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.message {
     max-width: 60%;
     padding: 10px 15px;
     margin: 10px 0;
     border-radius: 20px;
     word-wrap: break-word;
-    font-size: 18px; /* Ajusta el tamaño de la fuente aquí */
-  }
-  
-  /* Estilo para los mensajes del usuario */
-  .user-message {
+    font-size: 18px;
+}
+
+.user-message {
     background-color: #B370B0;
     color: black;
-    align-self: flex-end; /* Alinea el mensaje del usuario a la derecha */
-    border-radius: 10px;
-  }
-  
-  /* Estilo para los mensajes de la IA */
-  .ai-message {
+    align-self: flex-end;
+}
+
+.ai-message {
     background-color: #C3C3E6;
     color: #000000;
-    align-self: flex-start; /* Alinea el mensaje de la IA a la izquierda */
+    align-self: flex-start;
+    max-width: 90%;
+    text-align: left;
+    padding: 10px;
     border-radius: 10px;
-    width: 90%; /* Ajusta el ancho del mensaje */
-    max-width: 90%; /* Asegura que no exceda el 90% del ancho del contenedor padre */
-    text-align: left; /* Alinea el texto a la izquierda */
-    padding: 10px; /* Ajusta el relleno interno para dar más espacio al texto */
-  }
-  
-  /* Estilo para el contenedor de los mensajes */
-  .chat-messages {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+}
 
-/* Estilo para pantallas muy pequeñas (hasta 500px) */
-@media (max-width: 500px) {
+/* Estilo para pantallas pequeñas (hasta 480px) */
+@media (max-width: 480px) {
     .chat-content {
         width: 100%;
         padding: 10px;
         margin-left: 0;
         border-radius: 8px;
-        box-shadow: none; /* Eliminar sombra para simplificar en pantallas pequeñas */
+        box-shadow: none;
+    }
 
-/* Estilos para pantallas medianas (tablets) */
-@media (max-width: 1024px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-description {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .chat-content {
+        width: 100%;
+        padding: 20px;
+        margin-left: 0;
+    }
+}
+
+/* Estilos para pantallas medianas (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .chat-content {
+        width: 100%;
+        padding: 15px;
+        margin-left: 0;
+        border-radius: 8px;
+    }
+
+    .chat-header {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+        margin-right: 8px;
+    }
+
+    .chat-messages {
+        padding: 8px;
+        gap: 12px;
+    }
+
+    .message-container {
+        margin-bottom: 10px;
+    }
+
+    .message-profile-pic {
+        width: 28px;
+        height: 28px;
+    }
+
+    .message-content {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .chat-input {
+        padding: 10px;
+    }
+
+    .chat-input input {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .send-button {
+        padding: 10px;
+    }
+
+    .content-container {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center; /* Alinea los elementos al centro */
+        margin-left: 0; /* Elimina el margen izquierdo */
+    }
+
+    .image-description {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        padding: 20px; /* Ajusta el padding según sea necesario */
+        margin-bottom: 20px; /* Agrega un margen inferior para separar del siguiente contenido */
+    }
+
+    .chat-content {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        margin-left: 0; /* Elimina cualquier margen izquierdo */
+        padding: 20px; /* Ajusta el padding según sea necesario */
+    }
+    
+    .chat-header, .chat-input {
+        padding: 10px; /* Ajusta el padding para reducir el espacio */
+    }
+
+    .message {
+        font-size: 14px; /* Ajusta el tamaño del texto de los mensajes */
+    }
+
+    .send-button .material-icons {
+        font-size: 18px; /* Ajusta el tamaño del ícono */
+    }
+}
+
+/* Estilos para pantallas más grandes (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
     .chat-content {
         width: 80%;
         padding: 15px;
@@ -207,145 +292,46 @@
     .chat-header, .chat-input {
         padding: 8px;
     }
-  
+
     .chat-header {
-        padding: 8px;
         font-size: 14px;
     }
-  
+
     .profile-pic {
         width: 30px;
         height: 30px;
         margin-right: 5px;
     }
-  
+
     .chat-messages {
         padding: 5px;
         gap: 8px;
     }
-  
+
     .message-container {
         margin-bottom: 8px;
     }
-  
+
     .message-profile-pic {
         width: 25px;
         height: 25px;
     }
-  
+
     .message-content {
         padding: 8px;
         font-size: 14px;
     }
-  
-    .chat-input {
-        padding: 8px;
-    }
-  
+
     .chat-input input {
         padding: 8px;
         font-size: 14px;
     }
-  
+
     .send-button {
         padding: 8px;
     }
-  
-    .send-button .material-icons {
-        font-size: 16px;
-    }
-  }
-  
-  /* Estilo para pantallas pequeñas y medianas (501px a 768px) */
-  @media (min-width: 501px) and (max-width: 768px) {
-    .chat-content {
-        width: 100%;
-        padding: 15px;
-        margin-left: 0;
-        border-radius: 8px;
-    }
-  
-    .chat-header {
-        padding: 10px;
-        font-size: 16px;
-    }
-  
-    .profile-pic {
-        width: 35px;
-        height: 35px;
-        margin-right: 8px;
-    }
-  
-    .chat-messages {
-        padding: 8px;
-        gap: 12px;
-    }
-  
-    .message-container {
-        margin-bottom: 10px;
-    }
-  
-    .message-profile-pic {
-        width: 28px;
-        height: 28px;
-    }
-  
-    .message-content {
-        padding: 10px;
-        font-size: 16px;
-    }
-  
-    .chat-input {
-        padding: 10px;
-    }
-  
-    .chat-input input {
-        padding: 10px;
-        font-size: 15px;
-    }
-  
-    .send-button {
-        padding: 10px;
-    }
-  
-    .send-button .material-icons {
-        font-size: 18px;
-    }
-  }
-
-}
-
-/* Estilos para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    .chat-content {
-        width: 100%;
-        padding: 10px;
-        margin-left: 0;
-    }
-
-    .chat-header, .chat-input {
-        padding: 5px;
-    }
-
-    .profile-pic, .message-profile-pic {
-        width: 30px;
-        height: 30px;
-    }
-
-    .chat-input input {
-        padding: 5px;
-        font-size: 12px;
-    }
-
-    .send-button {
-        padding: 5px;
-    }
 
     .send-button .material-icons {
-        font-size: 14px;
-    }
-
-    .message {
-        font-size: 14px;
+        font-size: 16px;
     }
 }

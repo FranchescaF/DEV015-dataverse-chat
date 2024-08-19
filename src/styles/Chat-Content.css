@@ -5,10 +5,10 @@
     align-items: flex-start;
     flex: 1;
     margin-left: 220px; /* Desplaza el contenido a la derecha de la barra lateral */
-  }
-  
-  /* Contenedor de imagen y descripción */
-  .image-description {
+}
+
+/* Contenedor de imagen y descripción */
+.image-description {
     background-color: #D1C8E1;
     width: 350px; /* Ajusta el ancho según tus necesidades */
     padding: 60px;
@@ -17,9 +17,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;    
+    text-align: center;
 }
-  
+
 .item-image {
     width: 280px; /* Ajusta el tamaño según tus necesidades */
     height: auto;
@@ -30,25 +30,19 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card__title__chat{
+.card__title__chat {
     padding: 25px;
     font-size: 30px;
     color: #33102E;
 }
-.card__description__chat{
+
+.card__description__chat {
     color: #87255B; /* Color del Texto de Descripción */
     margin-top: 10px;
     padding: 20px;
 }
-/* Estilos para pantallas medianas */
-@media screen and (max-width: 1024px) {
-    .content-container {
-        margin-left: 150px; /* Reducir el margen para pantallas más pequeñas */
-        flex-direction: column;
-        align-items: center;
-    }
- 
-/* Para pantallas pequeñas (Teléfonos móviles pequeños, max-width: 320px a 480px) */
+
+/* Estilos para pantallas pequeñas (max-width: 480px) */
 @media (max-width: 480px) {
     .content-container {
         flex-direction: column;
@@ -67,7 +61,7 @@
     .chat-content {
         width: 100%; /* El chat ocupa todo el ancho disponible */
         margin-left: 0; /* Elimina el margen para pantallas pequeñas */
-        padding: 15px; /* Reduce el padding para ajustarse a pantallas pequeñas */
+        padding: 15px;
     }
 
     .card__title__chat {
@@ -81,7 +75,7 @@
     }
 }
 
-/* Para pantallas medianas (Teléfonos móviles medianos y grandes, max-width: 481px a 768px) */
+/* Estilos para pantallas medianas (481px a 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
     .content-container {
         flex-direction: column;
@@ -99,8 +93,8 @@
 
     .chat-content {
         width: 100%; /* El chat ocupa todo el ancho disponible */
-        margin-left: 0; /* Elimina el margen para pantallas medianas */
-        padding: 25px; /* Ajusta el padding para pantallas medianas */
+        margin-left: 0;
+        padding: 25px;
     }
 
     .card__title__chat {
@@ -112,31 +106,9 @@
         font-size: 16px;
         padding: 20px;
     }
-  .content-container {
-        margin-left: 0; /* Elimina el margen lateral */
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-  
-    .image-description {
-        display: none;
-    }
-  
-    .item-image {
-        width: 150px; /* Tamaño de la imagen más pequeño */
-    }
-  
-    .card__title__chat {
-        font-size: 20px; /* Fuente más pequeña */
-    }
-  
-    .card__description__chat {
-        font-size: 14px; /* Fuente más pequeña */
-    }
 }
 
-/* Para pantallas grandes (Tablets y laptops pequeñas, max-width: 769px a 1024px) */
+/* Estilos para pantallas grandes (769px a 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .content-container {
         flex-direction: row;
@@ -154,8 +126,8 @@
 
     .chat-content {
         width: 100%; /* El chat ocupa todo el ancho disponible */
-        margin-left: 30px; /* Ajusta el margen para pantallas grandes */
-        padding: 40px; /* Ajusta el padding para pantallas grandes */
+        margin-left: 30px;
+        padding: 40px;
     }
 
     .card__title__chat {
@@ -166,21 +138,5 @@
     .card__description__chat {
         font-size: 18px;
         padding: 20px;
-    }
-  
-    .image-description {
-        display: none;
-    }
-  
-    .item-image {
-        width: 200px; /* Ajusta el tamaño de la imagen */
-    }
-  
-    .card__title__chat {
-        font-size: 24px; /* Ajusta el tamaño de la fuente */
-    }
-  
-    .card__description__chat {
-        font-size: 16px; /* Ajusta el tamaño de la fuente */
     }
 }
