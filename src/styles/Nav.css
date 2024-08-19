@@ -114,7 +114,6 @@
   .navSidebar, .chat-sidebar {
     padding: 28px 24px;
     max-width: 200px;
-    transform: translateX(-100%); /* Ocultar la barra lateral por defecto en pantallas pequeñas */
   }
 
   .sidebar__button, .header__button {
